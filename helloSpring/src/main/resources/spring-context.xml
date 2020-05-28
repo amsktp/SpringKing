@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="helloDao" class="kr.tg.bna.HelloDao" />
+	
+	<bean id="calc" class="kr.tg.bna.Calc" />
+	
+	<bean id="score" class="kr.tg.bna.Score" >
+		<constructor-arg value="60"></constructor-arg>
+		<constructor-arg value="80"></constructor-arg>
+	</bean>
+	
+	<bean id="student" class="kr.tg.bna.Student" >
+		<constructor-arg ref="score"></constructor-arg>
+		<property name="name" value="이찬양"></property>
+	</bean>
+	
+</beans>
