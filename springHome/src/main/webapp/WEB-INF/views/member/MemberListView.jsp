@@ -9,20 +9,20 @@
 </head>
 
 <body>
-<%-- 	<jsp:include page="/Header.jsp" /> --%>
+	<jsp:include page="/WEB-INF/views/Header.jsp" />
+	
 	<h1>회원목록</h1>
 	<p>
 		<a href='./add'>신규 회원</a>
 	</p>
 	
 	<c:forEach var="memberDto" items="${memberList}">
-	
 		${memberDto.no},
 		<a href='./update?no=${memberDto.no }'>${memberDto.name}</a>,
 		${memberDto.email},
 		${memberDto.createdDate}
 		<a href='./delete?no=${memberDto.no}'>[삭제]</a><br>
 	</c:forEach>
-<%-- 	<jsp:include page="/Tail.jsp" /> --%>
+	<jsp:include page="/WEB-INF/views/Tail.jsp" />
 </body>
 </html>

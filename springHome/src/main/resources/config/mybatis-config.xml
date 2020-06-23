@@ -2,16 +2,20 @@
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<configuration>
 
+<configuration>
 
 	<settings>
 		<setting name="logImpl" value="LOG4J" />
 	</settings>
 
 	<typeAliases>
+	
 		<typeAlias type="com.edu.member.model.MemberDto"
 			alias="memberDto" />
+			
+		<typeAlias type="com.edu.home.model.HomeDto"
+			alias="homeDto" />
 	</typeAliases>
 
 </configuration>

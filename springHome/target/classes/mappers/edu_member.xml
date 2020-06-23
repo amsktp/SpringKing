@@ -16,6 +16,8 @@
 			javaType="java.util.Date"/>
 	</resultMap>
 	
+	
+	
 	<select id="memberSelectList" parameterType="map"
 		resultMap="memberResultMap">
 	
